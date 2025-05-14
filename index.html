@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayush - Web Developer</title>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+ <link rel="stylesheet" href="style.css" />
+</head>
+  <style>
+    
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 100vh;
+    }
+
+    .left-section {
+      background-color: #f5a623;
+      color: #000;
+      flex: 1 1 100%;
+      text-align: center;
+      padding: 2rem;
+    }
+
+
+    .left-section h1 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+
+    .left-section p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    .right-section {
+      flex: 1 1 100%;
+      background-color: #1c1c3c;
+      padding: 2rem;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      color: #ffc107;
+      margin-bottom: 1rem;
+    }
+
+    .section-title::before {
+      content: '📌';
+      margin-right: 10px;
+    }
+
+    .timeline-entry {
+      margin-bottom: 1.5rem;
+    }
+
+    .timeline-entry h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .timeline-entry p {
+      margin: 0.3rem 0 0;
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    @media (min-width: 768px) {
+      .left-section {
+        flex: 1 1 30%;
+      }
+
+      .right-section {
+        flex: 1 1 70%;
+      }
+    }
+     .left-section img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #000;
+      margin-bottom: 1rem;
+    }
+
+  </style>
+<body>
+  <div class="resume">
+    <div class="base">
+      <div class="profile">
+        <div class="left-section">
+          <img src="/WhatsApp Image 2025-05-14 at 7.05.38 PM.jpeg" alt="Profile Photo" />
+          <i class="fas fa-rocket"></i>
+        </div>
+        <div class="info">
+          <h1 class="name">Ayush</h1>
+          <h2 class="job">Web Developer</h2>
+        </div>
+      </div>
+
+      <div class="about">
+        <h3>About Me</h3>
+        <p>Passionate Web Developer with a knack for creating modern web solutions. Focused on clean UI, responsive layouts, and efficient backend systems. A quick learner always eager to explore new technologies and improve user experience.</p>
+      </div>
+
+      <div class="contact">
+        <h3>Contact Me</h3>
+        <div class="call">
+          <a href="tel:+918533040235"><i class="fas fa-phone"></i><span>+91 8533040235</span></a>
+        </div>
+        <div class="address">
+          <a href="https://goo.gl/maps/fiTBGT6Vnhy" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-map-marker"></i><span>Bareilly, U.P</span>
+          </a>
+        </div>
+        <div class="email">
+          <a href="mailto:ak6340772@gmail.com"><i class="fas fa-envelope"></i><span>ak6340772@gmail.com</span></a>
+        </div>
+      </div>
+
+      <div class="follow">
+        <h3>Follow Me</h3>
+        <div class="box">
+          <a href="#" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i></a>
+          <a href="https://www.linkedin.com/in/ayush-kumar-singh-25a994292" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+          <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-stack-overflow"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="func">
+      <div class="work">
+        <h3><i class="fa fa-briefcase"></i>Experience</h3>
+        <ul>
+          <li>
+            <span>Web Development</span>
+            <small>June 2024 – Present</small>
+            <p>Assisted in creating and maintaining websites using HTML, CSS, and JavaScript. Designed responsive layouts and collaborated with senior developers on project tasks.</p>
+          </li>
+          <li>
+            <span>Graphic Designer (Freelance)</span>
+            <small>January 2024 – Present</small>
+            <p>Designed logos, posters, and social media content for clients using Canva and Adobe Illustrator. Delivered high-quality visuals aligned with client branding goals.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="edu">
+        <h3><i class="fa fa-graduation-cap"></i>Education</h3>
+        <ul>
+          <li>
+            <span>BCA - Bachelor of Computer Applications</span>
+            <small>Invertis University, Bareilly</small>
+            <small>Expected May 2026</small>
+          </li>
+        </ul>
+      </div>
+
+      <div class="skills-prog">
+        <h3><i class="fas fa-code"></i>Skills</h3>
+        <ul>
+          <li><span>Office Automation</span></li>
+          <li><span>Graphic Designing</span></li>
+          <li><span>Web Development</span></li>
+          <li><span>Flexibility</span></li>
+          <li><span>Problem Solving</span></li>
+          <li><span>Communication</span></li>
+        </ul>
+      </div>
+
+      <div class="interests">
+        <h3><i class="fas fa-lightbulb"></i>Activities</h3>
+        <div class="interests-items">
+          <p>As a curious learner and tech enthusiast, I actively explore new tools and technologies through online courses and personal projects. I enjoy designing interfaces, building mini web applications, and participating in tech communities. In my free time, I read blogs on UI/UX, software trends, and productivity hacks to enhance my skill set.</p>
+        </div>
+      </div>
+
+      <div class="skills-prog">
+        <h3><i class="fas fa-code"></i>Technical Skills</h3>
+        <ul>
+          <li data-percent="95"><span>HTML5/CSS3</span><div class="skills-bar"><div class="bar"></div></div></li>
+          <li data-percent="90"><span>JavaScript</span><div class="skills-bar"><div class="bar"></div></div></li>
+          <li data-percent="85"><span>React/Redux</span><div class="skills-bar"><div class="bar"></div></div></li>
+          <li data-percent="80"><span>Angular</span><div class="skills-bar"><div class="bar"></div></div></li>
+          <li data-percent="90"><span>Node.js/Express</span><div class="skills-bar"><div class="bar"></div></div></li>
+          <li data-percent="85"><span>Python/Django</span><div class="skills-bar"><div class="bar"></div></div></li>
+          <li data-percent="75"><span>Java/Spring Boot</span><div class="skills-bar"><div class="bar"></div></div></li>
+          <li data-percent="85"><span>MongoDB</span><div class="skills-bar"><div class="bar"></div></div></li>
+          <li data-percent="80"><span>PostgreSQL</span><div class="skills-bar"><div class="bar"></div></div></li>
+          <li data-percent="75"><span>Docker</span><div class="skills-bar"><div class="bar"></div></div></li>
+          <li data-percent="70"><span>AWS/GCP</span><div class="skills-bar"><div class="bar"></div></div></li>
+        </ul>
+      </div>
+
+      <div class="skills-soft">
+        <h3><i class="fas fa-bezier-curve"></i>Development Tools</h3>
+        <ul>
+          <li data-percent="95">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45"></circle>
+              <circle class="cbar" cx="50" cy="50" r="45"></circle>
+            </svg>
+            <span>Git/GitHub</span>
+          </li>
+          <li data-percent="90">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45"></circle>
+              <circle class="cbar" cx="50" cy="50" r="45"></circle>
+            </svg>
+            <span>VS Code</span>
+          </li>
+          <li data-percent="85">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45"></circle>
+              <circle class="cbar" cx="50" cy="50" r="45"></circle>
+            </svg>
+            <span>Jira/Agile</span>
+          </li>
+          <li data-percent="80">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45"></circle>
+              <circle class="cbar" cx="50" cy="50" r="45"></circle>
+            </svg>
+            <span>Figma/XD</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="projects">
+        <h3><i class="fas fa-laptop-code"></i>Projects</h3>
+        <div class="interests-items">
+          <div class="project"><i class="fas fa-shopping-cart"></i><span>E-Commerce Platform</span></div>
+          <div class="project"><i class="fas fa-chart-line"></i><span>Analytics Dashboard</span></div>
+          <div class="project"><i class="fas fa-users"></i><span>Social Media App</span></div>
+          <div class="project"><i class="fas fa-mobile-alt"></i><span>Mobile API</span></div>
+          <div class="project"><i class="fas fa-cloud"></i><span>Cloud Migration</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Custom JS -->
+    <script src="resume.js"></script>
+  </body>
+</html>
