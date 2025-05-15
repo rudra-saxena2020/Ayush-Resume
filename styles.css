@@ -1,0 +1,422 @@
+/* ======= General Reset & Base Setup ======= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+body {
+  margin: 0;
+  background: #0a0f21;
+  color: #cce6ff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  overflow-y: scroll;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ======= Container and Layout ======= */
+.container {
+  display: flex;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 0 30px #001a4d66 inset;
+  border-radius: 12px;
+  background: #0f173b;
+  overflow: hidden;
+}
+
+/* ======= Sidebar Styling ======= */
+.sidebar {
+  flex: 0 0 300px;
+  background: #131b3a;
+  padding: 40px 30px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1.5px solid #003366aa;
+  box-shadow: inset 0 0 15px #00224455;
+}
+
+/* ======= Profile Picture Styling ======= */
+.profile-pic {
+  width: 200px; /* Adjusted size for better visibility */
+  height: 200px;
+  margin: 0 auto 25px auto; /* Center horizontally and add bottom margin */
+  border-radius: 50%;
+  overflow: hidden; /* Ensure the image stays within the circle */
+  border: 3px solid #3b82f6; /* Subtle blue border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  background-color: #f0f0f0; /* Fallback background color */
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the circle without distortion */
+  display: block;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1); /* Slightly larger hover effect */
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.5); /* Enhanced blue shadow on hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.name {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #0099ff;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+  text-align: center;
+  text-shadow: 0 0 8px #005ea0aa;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #7ac6ffcc;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 0.07em;
+}
+
+/* ======= Contact Info ======= */
+.contact-info {
+  font-size: 0.95rem;
+  color: #82bfffcc;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-info svg {
+  width: 20px;
+  height: 20px;
+  fill: #007acccc;
+  flex-shrink: 0;
+}
+
+.contact-info a {
+  color: #66b2ffcc;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.contact-info a:hover {
+  color: #0099ff;
+  text-decoration: underline;
+  text-shadow: 0 0 6px #005ea0cc;
+}
+
+/* ======= Sidebar Sections ======= */
+.sidebar-section {
+  margin-top: 38px;
+  padding-top: 18px;
+  border-top: 1.5px solid #003366bb;
+}
+
+.sidebar-section h3 {
+  color: #00a3ff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #005f99cc;
+  padding-bottom: 6px;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 5px #004a7d88;
+}
+
+.skills-list,
+.languages-list,
+.interests-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.skills-list li,
+.languages-list li,
+.interests-list li {
+  margin-bottom: 14px;
+  color: #7bb8ffcc;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: default;
+}
+
+/* ======= Skill Bars with Animation ======= */
+.skill-item {
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #0096ff;
+  letter-spacing: 0.04em;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 14px;
+  background: #002244;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px #003366aa;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #00a1ff, #0058b3);
+  box-shadow: 0 0 10px #007affbb;
+  width: 70%; /* Start at 0 width */
+  animation: fillProgress 2s ease forwards; /* Animate to the set width */
+}
+
+.progress-fill.html { --width: 0.92; }
+.progress-fill.css { --width: 0.85; }
+.progress-fill.js { --width: 0.80; }
+.progress-fill.design { --width: 0.88; }
+.progress-fill.office { --width: 0.70; }
+.progress-fill.problem { --width: 0.75; }
+.progress-fill.communication { --width: 0.90; }
+.progress-fill.flexibility { --width: 0.95; }
+
+@keyframes fillProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70; /* Set to the width defined in the class */
+  }
+}
+
+/* ======= Main Content Styling ======= */
+.main-content {
+  flex-grow: 1;
+  padding: 50px 60px 50px 50px;
+  overflow-y: auto;
+  color: #cde7ff;
+  position: relative;
+  scroll-behavior: smooth;
+  background: linear-gradient(180deg, #0a0f21, #121c3a);
+}
+
+/* Section Title with Icon */
+.section-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #009aff;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-shadow: 0 0 10px #004c99bb;
+  letter-spacing: 0.06em;
+}
+
+.section-title svg {
+  width: 32px;
+  height: 32px;
+  fill: #0099ffcc;
+  filter: drop-shadow(0 0 6px #004c99cc);
+}
+
+/* Paragraph Styling */
+.section p {
+  font-size: 1.1rem;
+  max-width: 850px;
+  color: #a6c9ffcc;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* ======= Education & Experience Blocks ======= */
+.edu-item,
+.job-item {
+  margin-bottom: 32px;
+  border-left: 5px solid #0099ffcc;
+  padding-left: 20px;
+  box-shadow: inset 0 0 20px #004d99aa;
+  border-radius: 6px;
+  background: #12254f33;
+  transition:  0.3s ease;
+}
+
+.edu-item:hover,
+.job-item:hover {
+  background: #0e1e3f88;
+}
+
+.edu-item h3,
+.job-item h3 {
+  color: #00a1ff;
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: 1.4rem;
+  text-shadow: 0 0 8px #0066cc99;
+}
+
+.edu-item p,
+.job-item p {
+  font-size: 1rem;
+  margin: 4px 0;
+  color: #8ab9ffcc;
+}
+
+.job-date {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #66b2ffcc;
+  margin-bottom: 12px;
+}
+
+/* Job Responsibilities List */
+.job-responsibilities {
+  list-style: disc;
+  padding-left: 25px;
+  color: #94bfffcc;
+  margin-top: 8px;
+}
+
+.job-responsibilities li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* ======= Scrollbar Styling ======= */
+.main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: #0a0f21;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: #007affcc;
+  border-radius: 10px;
+  box-shadow: 0 0 6px #005fbaff;
+}
+
+/* ======= Links ======= */
+a {
+  color: #66aaffcc;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #0099ff;
+  text-decoration: underline;
+  text-shadow: 0 0 6px #0066ccbb;
+}
+
+/* ======= Responsive Design ======= */
+@media (max-width: 980px) {
+  .container {
+    flex-direction: column;
+    max-width: 95vw;
+  }
+
+  .sidebar {
+    flex: none;
+    width: 100%;
+    padding: 25px 20px;
+    border-right: none;
+    border-bottom: 1.5px solid #003366aa;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+  }
+
+  .name {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+
+  .contact-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    font-size: 0.9rem;
+  }
+
+  .main-content {
+    padding: 30px 25px 40px 25px;
+  }
+}
+
+@media (max-width: 520px) {
+  .sidebar {
+    padding: 18px 12px;
+  }
+
+  .profile-pic {
+    width: 70px; /* Adjust size for smaller screens */
+    height: 70px;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .title {
+    font-size: 1rem;
+    margin-bottom: 18px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    gap: 8px;
+  }
+  .section-title svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .section p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .edu-item h3,
+  .job-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .edu-item p,
+  .job-item p {
+    font-size: 0.9rem;
+  }
+
+  .job-date {
+    font-size: 0.8rem;
+  }
+}
+
